@@ -22,6 +22,9 @@ function App(){
     {arr ? arr.map((item)=>{
                 return <div key={item.id}>
                     <p>{item.name}</p>
+                    <p>{item.email}</p>
+                    <p>{item.address.street}, {item.address.suite}, {item.address.city}, {item.address.zipcode}</p>
+                    <hr />
                 </div>
      }):
      <p>Loading...</p>
