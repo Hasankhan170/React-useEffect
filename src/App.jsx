@@ -17,6 +17,13 @@ function App(){
         InputValue.current.value = "";
         
     }
+
+    const DeleteTodo = ()=>{
+        console.log('deleteTodo');
+    }
+    const EditTodo = ()=>{
+        console.log('editTodo');
+    }
     return (
         <>
         <h1>hello Todo</h1>
@@ -29,8 +36,8 @@ function App(){
             {arr.map((item,index)=>{
                 return <div key={index}>
                     <p>{item}</p>
-                    <button>DELETE</button>
-                    <button>EDIT</button>
+                    <button onClick={()=> DeleteTodo(index)}>DELETE</button>
+                    <button onClick={EditTodo}>EDIT</button>
                 </div>
             })}
         </div>
