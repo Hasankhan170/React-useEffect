@@ -1,7 +1,13 @@
-function Button(){
+function Button(props){
     return (
         <>
-        <h1>Todo List</h1>
+        <button style={{
+            backgroundColor: props.color,
+            color: 'white',
+            padding: '10px 20px',
+            borderRadius: '5px',
+            cursor: 'pointer'
+        }}>{props.name}</button>
         </>
     )
 }
