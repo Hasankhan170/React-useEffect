@@ -22,8 +22,10 @@ function App(){
         arr.splice(index,1);
         setArr([...arr]);
     }
-    const EditTodo = ()=>{
-        console.log('editTodo');
+    const EditTodo = (index)=>{
+        const NewValue = prompt('New value')
+        arr.splice(index,1 ,NewValue)
+        setArr([...arr]);
     }
     return (
         <>
@@ -38,7 +40,7 @@ function App(){
                 return <div key={index}>
                     <p>{item}</p>
                     <button onClick={()=> DeleteTodo(index)}>DELETE</button>
-                    <button onClick={EditTodo}>EDIT</button>
+                    <button onClick={()=>EditTodo(index)}>EDIT</button>
                 </div>
             })}
         </div>
