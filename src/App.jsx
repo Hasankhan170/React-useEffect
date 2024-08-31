@@ -18,8 +18,9 @@ function App(){
         
     }
 
-    const DeleteTodo = ()=>{
-        console.log('deleteTodo');
+    const DeleteTodo = (index)=>{
+        arr.splice(index,1);
+        setArr([...arr]);
     }
     const EditTodo = ()=>{
         console.log('editTodo');
