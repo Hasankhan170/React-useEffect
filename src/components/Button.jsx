@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 function Button(props){
+    useEffect(()=>{
+        console.log('compont Mountain');
+        
+    },[])
     return (
         <>
         <button style={{
